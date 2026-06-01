@@ -75,12 +75,23 @@
     background-color: #a8aab1;
     padding: 20px;
     border-radius: 10px;
+
  }
+ .btn-arriba {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 1000;
+}
  footer {
-     background-color: #1e3a8a;
+     background-color: #30416f;
      color: white;
      text-align: center;
-     padding: 10px;
      margin: 20px;
  }
 
