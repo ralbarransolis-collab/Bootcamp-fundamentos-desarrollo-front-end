@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Etiquetas Semánticas</title>
+        <style>
+            header {
+                Font-family: Helvetica;
+                font-size: 38px;
+                color: white;
+                background-color: #2d8a49;
+                text-align: center;
+            }
+            article {
+                font-family: Helvetica;
+                font-size: 24px;
+                background-color: #a2429f;
+            }
+            footer {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 14px;
+                background-color: rgb(89, 89, 184);
+                text-align: right;
+
+            }
+            section {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 28px;
+                background-color: rgb(130, 28, 106);
+                text-align: center;
+            }
+            .autor {
+                font-weight: bold;
+                font-size: larger;
+            }
+            #destacado {
+                font-size: larger;
+                color: red
+            }
+            #segundo {
+                color: rgb(212, 212, 227);
+            }
+            .menu-horizontal {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+  
+            }
+            .menu-vertical {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>LOGO - <span>Nombre Empresa</span></header>
+        <nav>
+            <ul class="menu-horizontal titulo-principal">
+                <li><a href="#">Crear</a></li>
+                <li><a href="#">Editar</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+        <aside>
+            <ul class="menu-vertical">
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Servicios</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section><h1>Articulos</h1></section>
+            <article>
+                <h2> Como Instalar VSC</h2>
+                <p>Pasos para instalar VSC</p>
+            </article>
+            <article>
+                <h2 id="segundo"> Qué es HTML</h2>
+                <p> HTML es un lenguaje de marcado de hipertexto</p>
+            </article>
+            <article>
+                <h2> Qué es CSS</h2>
+                <p> Sí deseamos modificar el especto visual de una página usaremos CSS</p>
+            </article>
+        </main>
+        <footer> Sitio desarrollado por <span class="autor">XXXX</span></footer>
+    </body>
+</html>

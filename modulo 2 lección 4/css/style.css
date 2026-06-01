@@ -1,0 +1,133 @@
+ body {
+     margin: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #f4f6f9;
+ }
+
+ header {
+     background: linear-gradient(to right, #2c536d, #3498db);
+     color: white;
+     text-align: center;
+     padding: 40px;
+ }
+
+ .titulo-sitio {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 55px;
+     font-weight: bold;
+     margin-bottom: 15px;
+ }
+
+ #mensaje-bienvenida {
+     font-size: 22px;
+ }
+
+ nav {
+     background-color: #1d2e40;
+ }
+
+ .menu-principal {
+     list-style: none;
+     margin: 0;
+     padding: 18px;
+     display: flex;
+     justify-content: center;
+     gap: 40px;
+ }
+
+ .menu-principal li {
+     display: inline;
+ }
+
+ .menu-principal a {
+     text-decoration: none;
+     color: white;
+     font-size: 18px;
+     font-weight: bold;
+ }
+
+ main {
+     width: 80%;
+     margin: 30px auto;
+     display: flex;
+     gap: 25px;
+ }
+
+ section {
+     flex: 3;
+ }
+
+ aside {
+     flex: 1;
+     background: white;
+     padding: 20px;
+     border-radius: 12px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+     height: fit-content;
+ }
+
+ .titulo-seccion {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 24px;
+     color: #1f3f60;
+     border-left: 5px solid #3498db;
+     padding-left: 10px;
+     margin-bottom: 20px;
+ }
+
+ .curso-destacado {
+     background: #fffdf5;
+     border-left: 6px solid #f1c40f;
+     padding: 20px;
+     margin-bottom: 25px;
+     border-radius: 12px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ }
+
+ .curso {
+     background: white;
+     padding: 20px;
+     margin-bottom: 25px;
+     border-radius: 12px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ }
+
+ .curso-destacado h3,
+ .curso h3 {
+     color: #1f3f60;
+     font-size: 20px;
+     margin-top: 0;
+ }
+
+ .curso-destacado p,
+ .curso p {
+     font-size: 16px;
+ }
+
+ #curso-recomendado {
+     color: #006fc9;
+     font-weight: bold;
+ }
+
+ .lista-avisos {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .lista-avisos li {
+     padding: 15px 0;
+     border-bottom: 1px solid #ddd;
+     font-size: 18px;
+ }
+
+ #aviso-importante {
+     color: #d63031;
+     font-weight: bold;
+ }
+
+ footer {
+     text-align: center;
+     padding: 20px;
+     color: #555;
+ }

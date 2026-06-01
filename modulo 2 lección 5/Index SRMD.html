@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mi primera página con JavaScript</title>
+    </head>
+    <body>
+        <h1>Suma</h1>
+
+        <input type="number" placeholder="Ingrese primer número" id="numero1">
+
+        <input type="number" placeholder="Ingrese segundo número" id="numero2">
+
+        <button onclick="sumar()">Calcular suma</button>
+        <button onclick="restar()">Calcular resta</button>
+        <button onclick="multiplicar()">Calcular multiplicación</button>
+        <button onclick="dividir()">Calcular división</button>
+
+        <input type="text" id="resultado">
+
+        <script>
+            
+         function sumar() {
+           //declaro las variables
+           let numero1;
+           let numero2;
+           let suma;
+        ;
+
+           //asigno los valores
+           numero1=document.getElementById("numero1").value;
+           numero2=document.getElementById("numero2").value;
+
+           //calculo la suma
+           suma=Number(numero1)+Number(numero2);
+
+           //muestro el resultado
+          // alert(suma);
+              document.getElementById("resultado").value = suma;
+         }
+
+        function restar() {
+            let numero1;
+            let numero2;
+            let resta;
+
+            numero1=document.getElementById("numero1").value;
+            numero2=document.getElementById("numero2").value;
+
+            resta=Number(numero1)-Number(numero2);
+
+            // alert(resta);
+            document.getElementById("resultado").value = resta;
+            }
+        
+         function multiplicar() {
+            let numero1;
+            let numero2;
+            let multiplicacion;
+
+            numero1=document.getElementById("numero1").value;
+            numero2=document.getElementById("numero2").value;
+
+            multiplicacion=Number(numero1)*Number(numero2);
+
+            // alert(multiplicacion);
+            document.getElementById("resultado").value = multiplicacion;
+            }
+
+        function dividir() {
+            let numero1;
+            let numero2;
+            let division;
+
+            numero1=document.getElementById("numero1").value;
+            numero2=document.getElementById("numero2").value;
+
+            division=Number(numero1)/Number(numero2);
+
+            // alert(division);
+            document.getElementById("resultado").value = division;
+            }
+
+            //muestro una alerta con el valor
+        
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title> retención boletas honorarios</title>
+        <script src="./jquery-4.0.0.min.js"></script>
+    </head>
+    <body>
+        <h1>Calcula la retención en BH</h1>
+        <input type=""number" placeholder="monto bruto" id="bruto">
+        <button id="btnretención">Calcular retención</button>
+        <span id="retención"></span>
+
+        <script>
+
+            $("#btnretención").click(
+                function() {
+                    let bruto = $("#bruto").val();
+                    let retención = Number(bruto) * 0.1525;
+                    $("#retención").text("La retención es: " + retención);
+                }
+            );
+        </script>
+    </body>
+</html>

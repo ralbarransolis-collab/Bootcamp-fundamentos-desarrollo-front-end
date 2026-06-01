@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera página con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5 bg-secondary p-4 rounded">
+        <header>
+            <h1 class="text-center display-3">Mi empresa</h1>
+        </header>
+        <main>
+            <section>
+                <h2 class="text-center">Bienvenidos</h2>
+                <p class="text-body text-center">Sean todos bienvenidos a nuestro nuevo sitio web</p>
+            </section>
+            <section>
+                <h2 class="text-white">Contacto</h2>
+                <form action="#" method="post">
+                    <div class="mb-3">
+                     <label for="nombre" class="form-label">Nombre: </label>
+                            <input type="text" id="nombre" placeholder="Ingrese su nombre" class="form-control">
+                        </div>
+                    <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea id="mensaje" placeholder="Ingrese su mensaje" class="form-control"></textarea>
+                    </div>
+                    <div class="text-end">
+                    <button type="button" class="btn btn-secondary">Limpiar</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="Esta seguro?">Envíar</button>
+                    </div>
+                    <div class="offcanvas offcanvas-start" id="demo">
+                         <div class="offcanvas-header">
+                            <h1 class="offcanvas-title">Mi Empresa</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                             <div class="offcanvas-body">
+                                 <p>Quiénes somos</p>
+                                <p>Productos</p>
+                                <p>Sucursales</p>
+                                <p>Testimonios</p>
+                            </div>
+                    </div>
+                    <div class="container-fluid mt-5">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                        Más información
+                    </button>
+                    </div>
+
+                </form>
+            </section>
+        </main>
+        <footer>
+            <h6 class="text-center">Sitio creado por <kbd>Chocolat</kbd></h6>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

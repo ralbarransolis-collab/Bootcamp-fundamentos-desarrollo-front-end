@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Valor cuadrado</title>
+    <script src="./jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    <h1>Calculo del cuadrado de un valor</h1>
+    <input type="number" placeholder="Cuál número?" id="cifra">
+    <button id="btnelevadoa2">cálculo al cuadrado</button>
+    <span id="resultado"></span>
+    <script>
+        $("#btnelevadoa2").click(
+            function(){
+               let cifra= $("#cifra").val();
+               let cuadrado = Number(cifra)**2;
+               $("#resultado").text("El cuadrado es " + cuadrado);
+
+            }
+        );
+         </script>
+    </body> 
+</html>

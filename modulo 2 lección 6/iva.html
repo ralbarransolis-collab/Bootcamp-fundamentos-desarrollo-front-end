@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>IVA</title>
+
+        <script src="jquery-4.0.0.min.js"></script>
+    </head>
+    <body>
+        <h1>calculo valor más iva</h1>
+
+        <input type="number" placeholder="Ingrese el neto" id="neto">
+        <button id="btnliquido">Calcular</button>
+        <span id="liquido"></span>
+        <script>
+            $("#btnliquido").click(
+                function() {
+                    let neto = $("#neto").val();
+                    let iva = Number(neto) * 0.19;
+                    let liquido = Number(neto) + iva;
+                    $("#liquido").text("El valor con IVA es: " + liquido);
+                }
+            );
+
+        </script>
+    </body>     
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portal de Cursos</title>
+        <style>
+            .titulo-sitio {
+                font-family: impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+             
+            }
+            .menu-principal {
+                font-family: forte, Forte, 'Arial Rounded MT Bold', sans-serif;
+                font-size: 20px;
+                color:blue;
+            }
+            .titulo-seccion {
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 30px;
+                color: #114521;
+            }
+             .curso-destacado {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 22px;
+                color: #1b524c;
+                }
+            .curso {
+                font-family:trebuchet MS, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 20px;
+                color: black;
+            }
+            #curso-recomendado {
+                font-weight: bold;
+                color: #1b524c;
+            }
+            .lista-avisos {
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 18px;
+                color: purple;
+            }
+            #aviso-importante {
+                font-weight: bold;
+                color: red;
+            }
+            .texto-footer {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 14px;
+                color: #333;
+                text-align: center;
+                }
+
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <h1 class="titulo-sitio">Portal de Cursos</h1>
+            <p id="mensaje-bienvenida">Bienvenido al sistema académico</p>
+        </header>
+
+        <nav>
+            <ul class="menu-principal">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Docentes</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <section>
+                <h2 class="titulo-seccion">Cursos disponibles</h2>
+
+                <article class="curso-destacado">
+                    <h3>Introducción a HTML</h3>
+                    <p>Aprenderás la estructura básica de una página web.</p>
+                </article>
+
+                <article class="curso">
+                    <h3>Fundamentos de CSS</h3>
+                    <p id="curso-recomendado">
+                        Descubre cómo modificar el diseño visual de un sitio.
+                    </p>
+                </article>
+
+                <article class="curso">
+                    <h3>Primeros pasos con JavaScript</h3>
+                    <p>Aprende a agregar interacción a tus páginas.</p>
+                </article>
+            </section>
+
+            <aside>
+                <h2 class="titulo-seccion">Avisos</h2>
+
+                <ul class="lista-avisos">
+                    <li>Evaluación el viernes</li>
+                    <li>Material disponible</li>
+                    <li id="aviso-importante">Entrega obligatoria</li>
+                </ul>
+
+            </aside>
+
+        </main>
+
+        <footer>
+            <p class="texto-footer">
+                Plataforma educativa 2026
+            </p>
+        </footer>
+
+    </body>
+</html>
