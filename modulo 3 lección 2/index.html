@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejemplo de variables</title>
+
+    </head>
+    <body>
+        <button onclick="demostracion();">Ejecutar</button>
+
+        <script>
+            function demostracion() {
+                //Declaración e inicialización
+                var nombre = "Pedro" //String
+                console.log("Nombre: " + nombre);
+
+                nombre = "Ana";
+                console.log("Nombre: " + nombre);
+
+                // Bloque
+                if (true) {
+                    var edad = 39;
+                    let direccion = "Calle principal";
+
+                    console.log("Edad: " + edad);
+                    console.log("Dirección: " + direccion);
+
+                }
+
+                console.log("Edad: " + edad);
+                // Esta linea provocará un error, ya que dirección
+                // se intenta usar fuera del boque en que se declaró (let)
+              //  console.log("Dirección: " + direccion);
+
+                const rut = "12345678-9";
+                console.log("RUT: " + rut);
+                
+                // Esta linea provocaun error (TypeError de asignación)
+                //no se puede asignar más de un valor a una constante
+                //rut = "111111111-1";
+                //console.log("RUT: " + rut);
+            }
+        </script>
+
+    </body>
+
+</html>

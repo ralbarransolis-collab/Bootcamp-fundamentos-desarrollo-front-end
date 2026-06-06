@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejemplo de tipos de dato</title>
+
+    </head>
+    <body>
+        <button onclick="tipos();">Ejecutar</button>
+
+        <script>
+            //variable con scope glbal
+            var bebida = "Coca cola";
+
+            console.log("Bebida: "+ bebida);
+
+            function tipos() {
+
+                //Todas las variables tienen scope local (esta dentro de la función)
+
+              var nombre = "Marcela"; // tipo string
+              var edad = 25; // tipo nombre
+              var cesante = false;  // tipo boolean
+
+                //variable objeto
+              var asignatura = {
+                nombre: "Matemática avanzada",
+                nivel: "Tercer semestre",
+                profesor: "Gastón",
+                codigo: 123,
+                habilitada: true
+              };
+
+            // variable arreglo o lista ARRAY, tiene N valores
+              var trabajadores = [
+                'Juan',
+                'Marcela',
+                'Luis',
+                'Karina',
+                'Fernando',
+                'Ernesto',
+                'Marisol'
+              ]
+
+              console.log("Asignatura");
+              console.log("Nombre: "+asignatura.nombre);
+              console.log("nivel:" + asignatura.nivel);
+              console.log("Profesor: " + asignatura.profesor)
+              console.log("código:" + asignatura.codigo)
+              console.log("Habilitada: "+ asignatura.habilitada);
+
+              console.log("trabajadores: "+ trabajadores);
+              console.log("Segundo trabajador: " + trabajadores[1])
+
+              //posición no definida, fuera de rango
+             // console.log("Segundo trabajador: " + trabajadores[-1])
+
+             console.log("Nombre es tipo "+ typeof nombre);
+             console.log("Edad es tipo "+ typeof edad);
+             console.log("Cesante es tipo"+ typeof cesante);
+             console.log("Asignatura es tipo"+ typeof asignatura);
+             console.log("Trabajadores es tipo"+ typeof trabajadores);
+          
+            }
+        </script>
+
+    </body>
+
+</html>

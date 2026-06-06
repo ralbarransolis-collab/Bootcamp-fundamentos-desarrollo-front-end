@@ -57,6 +57,7 @@
                             <label class="form-label fw-bold">Temperatura:</label>
                             <input type="number" placeholder="valor" id="temperatura" class="form-control">
                         </div>
+                        
 
                         <div class="mb-3">
                             <label class="form-label fw-bold">Conversiones:</label>
@@ -71,16 +72,16 @@
                             </select>
 
                         </div>
-
-                        <div class="alert alert-secondary text-center fw-bold" role="alert">
-                            Resultado: <span id="resultado"></span>
-                        </div>
-
-                        <div class="text-end">
+                        <div class="text-end mb-2">
                             <button class="btn btn-secondary px-4" id="btnconvertir" onclick="convertir();">
                                 Convertir
                             </button>
                         </div>
+
+                        <div class="alert alert-secondary text-center p-3 fw-bold" role="alert">
+                            Resultado: <span id="resultado"></span>
+                        </div>
+
 
                     </div>
                 </div>
@@ -96,35 +97,35 @@
     </footer>
 
     <script>
-       function convertir() {
-    const temperatura = Number(document.getElementById("temperatura").value);
+        function convertir() {
+            const temperatura = Number(document.getElementById("temperatura").value);
 
-    let resultado;
+            let resultado;
 
-    if (document.getElementById("conversion").value == "1") {
-        resultado = ((temperatura * 9) / 5) + 32;
+            if (document.getElementById("conversion").value == "1") {
+                resultado = ((temperatura * 9) / 5) + 32;
 
-    } else if (document.getElementById("conversion").value == "2") {
-        resultado = temperatura + 273.15;
+            } else if (document.getElementById("conversion").value == "2") {
+                resultado = temperatura + 273.15;
 
-    } else if (document.getElementById("conversion").value == "3") {
-        resultado = ((temperatura- 32) * 5 / 9) + 273.15;
+            } else if (document.getElementById("conversion").value == "3") {
+                resultado = ((temperatura - 32) * 5 / 9) + 273.15;
 
-    } else if (document.getElementById("conversion").value == "4") {
-        resultado = (temperatura - 32) * 5 / 9;
+            } else if (document.getElementById("conversion").value == "4") {
+                resultado = (temperatura - 32) * 5 / 9;
 
-    } else if (document.getElementById("conversion").value == "5") {
-        resultado = temperatura - 273.15;
+            } else if (document.getElementById("conversion").value == "5") {
+                resultado = temperatura - 273.15;
 
-    } else if (document.getElementById("conversion").value == "6") {
-        resultado = ((temperatura - 273.15) * 9 / 5) + 32;
+            } else if (document.getElementById("conversion").value == "6") {
+                resultado = ((temperatura - 273.15) * 9 / 5) + 32;
 
-    } else {
-        resultado = "";
-    }
+            } else {
+                resultado = "";
+            }
 
-    document.getElementById("resultado").textContent = resultado;
-}
+            document.getElementById("resultado").textContent = resultado;
+        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
