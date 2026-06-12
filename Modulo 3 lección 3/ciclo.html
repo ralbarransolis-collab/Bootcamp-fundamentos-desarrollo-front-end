@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <tittle>Ejemplo de ciclo</tittle>
+
+    </head>
+
+    <body>
+
+        <button onclick="recorrer()";>Ejecutar</button>
+
+    </body>
+        <script>
+            //var i; convierte la función global
+
+        function recorrer () {
+
+            //convierte la función local. Al estar fuera del ciclo aparece el valor de salida del contador en la consola
+            let i;
+
+            for (i=1; i<= 10; i++){
+                console.log(`Iteración #${i}`);
+            }
+            //en la consola aparecerá valor de salida 11 , ya ese n° no cumple la condición del ciclo.
+            console.log(`Valor de salida del contador: ${i}`);
+        } 
+        </script>
+</html>

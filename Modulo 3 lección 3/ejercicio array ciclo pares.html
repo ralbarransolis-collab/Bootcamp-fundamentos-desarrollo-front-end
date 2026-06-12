@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>Ejemplo de ciclo</title>
+
+    </head>
+
+    <body>
+
+        <button onclick="recorrer()";>Ejecutar</button>
+
+    </body>
+        <script>
+            //var i; convierte la función global
+
+        function recorrer () {
+            const numeros = ['1987', '1986', '1963', '1991','1996','2004','2026'];
+
+            for (let i = 0; i < numeros.length; i++) {
+                const numero = Number(numeros[i]);
+                if (numero % 2 === 0) {
+                    console.log(numero);
+                }
+            }
+        }
+        </script>
+</html>

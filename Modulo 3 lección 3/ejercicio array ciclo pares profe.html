@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>Ejercicio numeros pares</title>
+
+    </head>
+
+    <body>
+
+        <button onclick="pares()";>Ejecutar</button>
+
+    </body>
+        <script>
+            //var i; convierte la función global
+
+        function pares () {
+            let numeros = [1987,1986,1963,1996,2004,2026];
+            let contador = 0
+
+            for(let par of numeros){
+                if (par % 2 == 0){
+
+                    // cuanta la cantidad de números pares
+                    contador++;
+
+                    //muestra los pares
+                    console.log(par);
+                }
+            }
+            //muestra la cantidad de pares
+            console.log(`Hay ${contador} números pares`);
+        }
+        </script>
+</html>

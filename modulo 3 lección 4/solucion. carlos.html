@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>multiplicacion con sumas sucesivas</title>
+
+    </head>
+
+    <body>
+
+        <label>Multiplicando: </label>
+
+        <input id="multiplicando" type="number">
+
+        <label>Multiplicador: </label>
+
+        <input id="multiplicador" type="number">    
+
+        <button onclick="ejecutar();">Ejecutar</button>
+
+        <p id="resultado"></p>
+
+        
+
+        <script>
+
+            function multiplicarPorSumas(a, b) {
+
+                let resultado = 0;
+
+                let veces = Math.abs(b);
+
+                let operacion = "";
+
+                for (let i = 0; i < veces; i++) {
+
+                    resultado += a;
+
+                    operacion += a;
+
+                    if (i < veces - 1) {
+
+                        operacion += " + ";
+
+                    }   
+
+                }
+
+                if (b < 0) {
+
+                    resultado = -resultado;
+
+                    operacion = "-" + operacion;
+
+                }
+
+                return {resultado, operacion};
+
+            }
+
+            function ejecutar() {
+
+                let multiplicando = Number(document.getElementById("multiplicando").value);
+
+                let multiplicador = Number(document.getElementById("multiplicador").value);
+
+                
+
+                if (isNaN(multiplicando) || isNaN(multiplicador)) {
+
+                    alert("Por favor, ingrese números válidos.");
+
+                    return;
+
+                }
+
+                let datos = multiplicarPorSumas(multiplicando, multiplicador);
+
+                document.getElementById("resultado").textContent = `${multiplicando} x ${multiplicador} = ${datos.resultado} (${datos.operacion})`; 
+
+            }
+
+        </script>
+
+    </body>

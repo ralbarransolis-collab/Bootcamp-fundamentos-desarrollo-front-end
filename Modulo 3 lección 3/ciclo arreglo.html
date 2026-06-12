@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <tittle>Ejemplo de ciclo</tittle>
+
+    </head>
+
+    <body>
+
+        <button onclick="recorrer()";>Ejecutar</button>
+
+    </body>
+        <script>
+            //var i; convierte la función global
+
+        function recorrer () {
+
+            
+            let i;
+            let colores = ['blanco', 'azul', 'rojo', 'amarillo','negro','naranjo','morado','cafe', 'celeste', 'girs'];
+
+            //for (i=0; i<= 4; i++){ al poner la cantidad que cierra el ciclo se limita a la cantidad del arreglo, para solucionar eso se usa lenght y -1 para llegar al último
+            for (i=0; i<= colores.length -1; i++) {
+                console.log(`color ${colores[i]}`);
+            }
+
+            //metodo que simula un ciclo
+            colores.forEach(function (color){
+                console.log(color);
+            });
+
+            // ciclo que recorre los elementos de una arreglo
+            for(let color of colores) {
+                console.log(color)
+            }
+        }
+        </script>
+</html>

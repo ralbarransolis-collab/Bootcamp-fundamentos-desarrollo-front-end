@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Piedra, Papel o Tijera</title>
+</head>
+<body>
+
+    <h1>Juego: Piedra, Papel o Tijera</h1>
+
+    <label>Jugador 1:</label>
+    <select id="jugador1">
+        <option value="piedra">Piedra</option>
+        <option value="papel">Papel</option>
+        <option value="tijera">Tijera</option>
+    </select>
+
+    <br><br>
+
+    <label>Jugador 2:</label>
+    <select id="jugador2">
+        <option value="piedra">Piedra</option>
+        <option value="papel">Papel</option>
+        <option value="tijera">Tijera</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="jugar()">Jugar</button>
+
+    <h2>Resultado</h2>
+    <p id="resultado"></p>
+
+    <h2>Estadísticas</h2>
+    <p id="estadisticas"></p>
+
+    <script>
+        let ganadasJugador1 = 0;
+        let ganadasJugador2 = 0;
+        let empates = 0;
+
+        function jugar() {
+            let jugador1 = document.getElementById("jugador1").value;
+            let jugador2 = document.getElementById("jugador2").value;
+
+            let resultado = "";
+
+            if (jugador1 == jugador2) {
+                resultado = "Empate";
+                empates++;
+
+            } else if (
+                jugador1 == "piedra" && jugador2 == "tijera" ||
+                jugador1 == "papel" && jugador2 == "piedra" ||
+                jugador1 == "tijera" && jugador2 == "papel"
+            ) {
+                resultado = "Gana el Jugador 1";
+                ganadasJugador1++;
+
+            } else {
+                resultado = "Gana el Jugador 2";
+                ganadasJugador2++;
+            }
+
+            document.getElementById("resultado").textContent =
+                "Jugador 1 eligió " + jugador1 + 
+                " y Jugador 2 eligió " + jugador2 + 
+                ". " + resultado + ".";
+
+            document.getElementById("estadisticas").textContent =
+                "Rondas ganadas Jugador 1: " + ganadasJugador1 +
+                " | Rondas ganadas Jugador 2: " + ganadasJugador2 +
+                " | Empates: " + empates;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <tittle>Ejemplo de ciclo</tittle>
+
+    </head>
+
+    <body>
+
+        <button onclick="recorrer()";>Ejecutar</button>
+
+    </body>
+        <script>
+            //var i; convierte la función global
+
+        function recorrer () {
+
+            
+            let i;
+            let colores = ['blanco', 'azul', 'rojo', 'amarillo','negro','naranjo','morado','cafe', 'celeste', 'gris']
+
+            // el push empuja elementos al arreglo, lo deja en último lugar
+              colores.push('verde','calipso');
+
+              //método que elimina el útimo elemento del arreglo
+              //colores.pop();
+            //mérodo que elimina un elemento desde una posición
+             // colores.splice (5, 1);
+
+            //Metodo que devuelve la posición de un elemento sies que existe
+             console.log(colores.indexOf('gris'));
+
+            colores.splice(colores.indexOf('gris'),1);
+
+            // ciclo que recorre los elementos de una arreglo
+            for(let color of colores) {
+                console.log(color)
+            }
+          
+        }
+        </script>
+</html>
