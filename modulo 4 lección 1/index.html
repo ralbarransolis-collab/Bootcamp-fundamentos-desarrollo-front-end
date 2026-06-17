@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <meta charset="utf-8">
+        <title>Ejemplo de clase</title>
+
+    </head>
+
+    <body>
+
+        <button onclick="ejecutar()";>Ejecutar</button>
+
+    </body>
+        <script>
+            class Persona  {
+                constructor (nombre, edad, sexo) {
+                    this.nombre = nombre;
+                    this.edad = edad;
+                    this.sexo = sexo;
+                }
+                comer (){
+                    console.log(`${this.nombre} esta comiendo...`);
+                }
+                caminar (){
+                    console.log(`${this.nombre} esta caminando...`);
+                }
+                dormir(){
+                    console.log(`${this.nombre} esta durmiendo...`);
+                }
+            }
+         function ejecutar (){
+            let persona1 = new Persona ('Javier', 30, 'Masculino');
+            let persona2 = new Persona ('Albert', 28, 'Masculino');
+            let persona3 = new Persona ('Dayana', 31, 'Femenino');
+
+            persona1.caminar ();
+            persona2.comer ();
+            persona3.dormir ();
+         }
+        </script>
+</html>

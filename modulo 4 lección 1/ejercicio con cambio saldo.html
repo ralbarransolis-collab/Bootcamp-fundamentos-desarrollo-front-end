@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo de clase</title>
+    </head>
+    <body>
+        <button onclick="ejecutar();">Ejecutar</button>
+        <script>
+            class CuentaCorriente {
+                constructor (nombre, rut, NumeroCuenta, saldo) {
+                    this.nombre = nombre;
+                    this.rut = rut;
+                    this.NumeroCuenta = NumeroCuenta;
+                    this.saldo = saldo;
+                }
+                verSaldo (){
+                    console.log(`${this.nombre} tiene ${this.saldo}`);
+                }            
+                verDatosCuenta (){
+                    console.log(`${this.nombre} , su rut es ${this.rut} tiene este número de cuenta ${this.NumeroCuenta} y saldo ${this.saldo}`);
+                }
+                depositar(monto) {
+                    if (monto > 0) {
+                        this.saldo += monto;
+                    }
+                }
+                girar(monto) {
+                    if (monto <= this.saldo){
+                        this.saldo -= monto;
+                    }
+                }
+            }
+            function ejecutar (){
+                let persona1 = new CuentaCorriente ('A','12345678-9', 232323, 1500);
+                let persona2 = new CuentaCorriente('B','98765432-1', 232324, 987)
+                
+                persona1.verSaldo ();
+                persona1.depositar(100000);
+                persona1.girar(50000);
+                persona1.verSaldo ();
+                persona2.verDatosCuenta ();
+            }
+            </script>
+    </body>
+</html>

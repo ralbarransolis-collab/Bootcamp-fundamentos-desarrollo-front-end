@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cine - Ejemplo de método privado</title>
+</head>
+<body>  
+
+<button onclick="ejecutar()">Ejecutar</button>
+
+<script>
+    class EntradaCine {
+        #pelicula;
+        #precio;
+        #vendida;
+
+        constructor(pelicula, precio, vendida = false) {
+            this.#pelicula = pelicula;
+            this.#precio = precio;
+            this.#vendida = vendida;
+        }
+
+        #estaDisponible() {
+            return this.#vendida === false;
+        }
+
+        vender() {
+            if (this.#estaDisponible()) {
+                this.#vendida = true;
+                return `Entrada vendida para ${this.#pelicula}. Precio: $${this.#precio}`;
+            } else {
+                return `La entrada para ${this.#pelicula} ya fue vendida`;
+            }
+        }
+
+        mostrarInformacion() {
+            if (this.#estaDisponible()) {
+                return `${this.#pelicula} está disponible`;
+            } else {
+                return `${this.#pelicula} no está disponible`;
+            }
+        }
+    }
+
+    function ejecutar() {
+        let entrada1 = new EntradaCine('Star Wars', 10000);
+        let entrada2 = new EntradaCine('Your Name', 10000, true);
+
+        alert(entrada1.mostrarInformacion());
+        alert(entrada2.mostrarInformacion());
+        alert(entrada1.vender());
+        alert(entrada2.vender());
+    }
+</script>
+
+</body>
+</html>

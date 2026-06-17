@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo setTimeout</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="bg-primary text-white text-center p-3">
+        <h1>Ejemplo de setTimeout()</h1>
+    </header>
+
+    <main class="container mt-4">
+
+        <div class="card shadow">
+
+            <div class="card-body text-center">
+
+                <h3 class="card-title mb-3">Mensajes programados</h3>
+
+                <button class="btn btn-success" onclick="iniciar();">
+                    Mostrar mensajes
+                </button>
+
+                <div id="resultado" class="alert alert-info mt-4 text-start text-center">
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        Diseñado por <kbd class="bg-success">CHOCOLAT</kbd>
+    </footer>
+
+    <script>
+
+        function iniciar() {
+
+            document.getElementById("resultado").textContent= "Buenos días";
+
+            setTimeout(function () {
+                document.getElementById("resultado").textContent = "¿Cómo estás?";
+            }, 3000);
+
+            setTimeout(function () {
+                document.getElementById("resultado").textContent = "Espero que estés estudiando JavaScript.";
+            }, 6000);
+
+            setTimeout(function () {
+                document.getElementById("resultado").textContent = "¡Mucho éxito!";
+            }, 9000);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

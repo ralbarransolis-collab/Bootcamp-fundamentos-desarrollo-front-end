@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de método privado</title>
+</head>
+<body>  
+    <h1>setTimeOut()</h1>
+
+<button onclick="iniciar();">Iniciar proceso</button>
+
+<p id="resultado"></p>
+<script>
+    function iniciar(){
+        document.getElementById("resultado").textContent="Procesando...";
+
+        //Luego de 5 seg asigna el texto "Proceso completado" al parrafo del resultado.
+        setTimeout (function (){
+            document.getElementById("resultado").textContent="Proceso completado";
+        }, 5000);
+    }
+    
+
+</script>
+</body>
+</html>

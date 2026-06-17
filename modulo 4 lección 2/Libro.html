@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de encapsulamiento</title>
+</head>
+
+<body>
+
+    <button onclick="ejecutar()">Ejecutar</button>
+
+    <script>
+
+        class Libro {
+
+            #nombre;
+            #prestado;
+
+            constructor(nombre) {
+                this.#nombre = nombre;
+                this.#prestado = false;
+            }
+
+            prestar() {
+
+                if (this.#prestado) {
+                    console.log(`El libro "${this.#nombre}" ya está prestado. No se puede prestar nuevamente.`);
+                } else {
+                    this.#prestado = true;
+                    console.log(`El libro "${this.#nombre}" ha sido prestado.`);
+                }
+
+            }
+
+            devolver() {
+
+                if (this.#prestado == false) {
+                    console.log(`El libro "${this.#nombre}" ya está disponible. No se puede devolver.`);
+                } else {
+                    this.#prestado = false;
+                    console.log(`El libro "${this.#nombre}" ha sido devuelto.`);
+                }
+
+            }
+
+            estado() {
+
+                if (this.#prestado) {
+                    console.log(`Estado de "${this.#nombre}": Prestado.`);
+                } else {
+                    console.log(`Estado de "${this.#nombre}": Disponible.`);
+                }
+
+            }
+
+        }
+
+        function ejecutar() {
+
+            let libro1 = new Libro("Las Paltas");
+            let libro2 = new Libro("El tiburón");
+
+            // El libro 1 queda prestado
+            libro1.prestar();
+            libro2. devolver();
+            
+            console.log("------ Estado inicial ------");
+            libro1.estado();
+            libro2.estado();
+
+            console.log("------ Intentos de préstamo ------");
+
+            // No debería permitir prestarlo nuevamente
+            libro1.prestar();
+
+            // Sí debería permitir prestar el libro 2
+            libro2.prestar();
+
+            console.log("------ Estado final ------");
+
+            libro1.estado();
+            libro2.estado();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

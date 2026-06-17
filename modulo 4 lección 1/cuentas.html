@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cuentas Bancarias</title>
+</head>
+
+<body>
+
+    <button onclick="ejecutar()">Mostrar Información</button>
+
+    <script>
+
+        // Clase Cliente
+        class Cliente {
+
+            constructor(nombre, rut) {
+
+                this.nombre = nombre;
+                this.rut = rut;
+
+            }
+
+        }
+
+        // Clase Padre
+        class Cuenta {
+
+            constructor(cliente, saldo) {
+
+                this.cliente = cliente;
+                this.saldo = saldo;
+
+            }
+
+        }
+
+        // Cuenta Vista
+        class CuentaVista extends Cuenta {
+
+            constructor(cliente, saldo, maxMontoGiro) {
+
+                super(cliente, saldo);
+
+                this.maxMontoGiro = maxMontoGiro;
+
+            }
+
+            verInformacion() {
+
+                console.log(`CUENTA VISTA: ${this.cliente.nombre} rut ${this.cliente.rut} tiene un saldo de $${this.saldo} y un monto máximo de giro de $${this.maxMontoGiro}`);
+
+            }
+
+        }
+
+        // Cuenta Corriente
+        class CuentaCorriente extends Cuenta {
+
+            constructor(cliente, saldo, sobregiroAutorizado) {
+
+                super(cliente, saldo);
+
+                this.sobregiroAutorizado = sobregiroAutorizado;
+
+            }
+
+            verInformacion() {
+
+                console.log(`CUENTA CORRIENTE: ${this.cliente.nombre} rut ${this.cliente.rut} tiene un saldo de $${this.saldo} y un sobregiro autorizado de $${this.sobregiroAutorizado}`);
+
+            }
+
+        }
+
+        // Cuenta Ahorro
+        class CuentaAhorro extends Cuenta {
+
+            constructor(cliente, saldo, maxCantidadGiros) {
+
+                super(cliente, saldo);
+
+                this.maxCantidadGiros = maxCantidadGiros;
+
+            }
+
+            verInformacion() {
+
+                console.log(`CUENTA AHORRO: ${this.cliente.nombre}  rut ${this.cliente.rut} tiene un saldo de $${this.saldo} y una cantidad máxima de ${this.maxCantidadGiros} giros`);
+
+            }
+
+        }
+
+        function ejecutar() {
+
+            // Un solo cliente con tres cuentas
+
+            let cliente1 = new Cliente("Jaime", "11.111.111-1");
+
+            let vista = new CuentaVista(cliente1, 250000, 200000);
+            let corriente = new CuentaCorriente(cliente1, 500000, 300000);
+            let ahorro = new CuentaAhorro(cliente1, 800000, 6);
+
+            vista.verInformacion();
+            corriente.verInformacion();
+            ahorro.verInformacion();
+
+
+            // Distintos clientes con distintas cuentas
+
+            let cliente2 = new Cliente("Camila", "22.222.222-2");
+            let cliente3 = new Cliente("Daniela", "33.333.333-3");
+            let cliente4 = new Cliente("Amelia", "44.444.444-4");
+
+            let vista1 = new CuentaVista(cliente2, 400000000, 300000);
+            let corriente1 = new CuentaCorriente(cliente3, 20000, 700000);
+            let ahorro1 = new CuentaAhorro(cliente4, 10000, 3);
+
+            vista1.verInformacion();
+            corriente1.verInformacion();
+            ahorro1.verInformacion();
+
+
+            // Mismo tipo de cuenta con distintos clientes
+
+            let cliente5 = new Cliente("Tomas", "55.555.555-5");
+            let cliente6 = new Cliente("Adela", "66.666.666-6");
+            let cliente7 = new Cliente("Trotter", "77.777.777-7");
+
+            let vista2 = new CuentaVista(cliente5, 433565635, 200000);
+            let vista3 = new CuentaVista(cliente6, 24125154215, 200000);
+            let vista4 = new CuentaVista(cliente7, 3289783, 200000);
+
+            vista2.verInformacion();
+            vista3.verInformacion();
+            vista4.verInformacion();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

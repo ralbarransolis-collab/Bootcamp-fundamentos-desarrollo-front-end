@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mayor y Menor Número</title>
+</head>
+
+<body>
+
+    <h1>Ordenamiento de Tres Números</h1>
+
+    <script>
+
+        // Crear un arreglo vacío
+        let numeros = [];
+
+        // Solicitar tres números al usuario
+        for (let i = 0; i < 3; i++) {
+
+            let numero = parseFloat(prompt("Ingrese el número " + (i + 1)));
+
+            numeros.push(numero);
+
+        }
+
+        // Ordenamiento burbuja
+        let intercambio;
+
+        do {
+
+            intercambio = false;
+
+            for (let i = 0; i < numeros.length - 1; i++) {
+
+                if (numeros[i] > numeros[i + 1]) {
+
+                    let auxiliar = numeros[i];
+                    numeros[i] = numeros[i + 1];
+                    numeros[i + 1] = auxiliar;
+
+                    intercambio = true;
+
+                }
+
+            }
+
+        } while (intercambio);
+
+        // Obtener el menor y el mayor
+        let menor = numeros[0];
+        let mayor = numeros[numeros.length - 1];
+
+        // Mostrar los resultados
+        if (menor == mayor) {
+
+            alert("Los tres números ingresados son idénticos.");
+
+            document.write("<h2>Resultado</h2>");
+            document.write("<p>Los tres números ingresados son idénticos.</p>");
+
+        } else {
+
+            alert("Mayor: " + mayor + "\nMenor: " + menor);
+
+            document.write("<h2>Resultado</h2>");
+            document.write("<p>Mayor número: " + mayor + "</p>");
+            document.write("<p>Menor número: " + menor + "</p>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

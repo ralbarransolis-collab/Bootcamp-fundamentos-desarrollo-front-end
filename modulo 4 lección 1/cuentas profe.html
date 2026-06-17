@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>Ejemplo de Cuentas con herencia</title>
+
+    </head>
+
+    <body>
+
+        <button onclick="ejecutar();">Ejecutar</button>
+
+        <script>
+
+            class Cliente {
+
+                constructor (nombre, rut) {
+
+                    this.nombre = nombre;
+
+                    this.rut = rut;
+
+                }
+
+            }
+
+            class Cuenta {
+
+                constructor (cliente, banco, saldo) {
+
+                    this.cliente = cliente;
+
+                    this.banco = banco;
+
+                    this.saldo = saldo
+
+                }
+                depositar(monto) {
+
+                    if (monto > 0) {
+
+                        this.saldo += monto;
+
+                    }
+
+                }
+
+                girar(monto) {
+
+                    if (monto <= this.saldo){
+
+                        this.saldo -= monto;
+
+                    }
+
+                }
+                verDatos() {
+
+                    console.log(`La cuenta es de ${this.cliente.nombre} y es del banco ${this.banco}. El saldo de la cuenta es de ${this.saldo}`);
+
+                }
+
+            }
+
+            class CuentaVista extends Cuenta {
+
+                constructor (cliente, banco, saldo, limiteMontoGiro) {
+
+                    super(cliente, banco, saldo);
+
+                    this.limiteMontoGiro = limiteMontoGiro;
+
+                }
+
+                verLimiteMontoGiro() {
+
+                    console.log(`El límite de monto de giro es ${this.limiteMontoGiro}`);
+
+                }
+               
+
+            }
+
+            class CuentaCorriente extends Cuenta {
+
+                constructor (cliente, banco, saldo, sobregiroAutorizado) {
+
+                    super(cliente, banco, saldo);
+
+                    this.sobregiroAutorizado = sobregiroAutorizado;
+
+                }
+
+                verSobregiroAutorizado() {
+
+                    console.log(`El sobregiro autorizado es de ${this.sobregiroAutorizado}`);
+
+                }
+                
+
+            }
+
+            class CuentaAhorro extends Cuenta {
+
+                constructor(cliente, banco, saldo, limiteCantidadGiros) {
+
+                    super(cliente, banco, saldo);
+
+                    this.limiteCantidadGiros = limiteCantidadGiros;
+
+                }
+
+                verLimiteCantidadGiros() {
+
+                    console.log(`El límite de cantidad de giros es ${this.limiteCantidadGiros}`);
+
+                }
+               
+                
+            }
+
+
+            function ejecutar (){
+
+                let cliente1 = new Cliente('Fernando', '22222222-2');
+
+                
+
+                let cuentaVista1 = new CuentaVista(cliente1, 'BCI', 0, 300000);
+
+                let cuentaCorriente1 = new CuentaCorriente(cliente1, 'BCI', 0, 3000000);
+
+                let cuentaAhorro1 = new CuentaAhorro(cliente1, 'Itaú', 20000, 6);
+
+                
+
+                cuentaVista1.verDatos();
+
+                cuentaVista1.verLimiteMontoGiro();
+
+                cuentaCorriente1.verDatos();
+
+                cuentaCorriente1.verSobregiroAutorizado();
+
+                cuentaAhorro1.verDatos();
+
+                cuentaAhorro1.verLimiteCantidadGiros();
+
+                cuentaVista1.depositar (50000);
+
+                cuentaAhorro1.girar (5500);
+
+                cuentaCorriente1.girar (10000)
+
+                cuentaVista1.verDatos();
+
+                cuentaCorriente1.verDatos();
+
+                cuentaAhorro1.verDatos();
+
+
+            }
+
+            </script>
+
+    </body>
+
+</html>

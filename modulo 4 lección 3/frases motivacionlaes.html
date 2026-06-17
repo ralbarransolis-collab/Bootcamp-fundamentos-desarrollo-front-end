@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Motivación Diaria</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header class="bg-primary text-white text-center p-3">
+        <h1>Motivación Diaria</h1>
+    </header>
+
+    <main class="container mt-4 flex-grow-1">
+
+        <div class="card shadow">
+
+            <div class="card-body text-center">
+
+                <h3 class="card-title mb-3">Frase Motivadora</h3>
+
+                <p id="resultado" class="alert alert-info fs-4 text-center"></p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        Diseñado por <kbd class="bg-success">CHOCOLAT</kbd>
+    </footer>
+
+    <script>
+
+        const frases = [
+            "El esfuerzo de hoy es el éxito de mañana.",
+            "Aprender algo nuevo te hace más fuerte cada día.",
+            "Los grandes resultados comienzan con pequeños pasos.",
+            "Nunca es tarde para alcanzar tus metas."
+        ];
+
+        let indice = 0;
+
+        
+        document.getElementById("resultado").textContent = frases[indice];
+
+        
+        setInterval(function () {
+
+            indice++;
+
+            if (indice >= frases.length) {
+                indice = 0;
+            }
+
+            document.getElementById("resultado").textContent = frases[indice];
+
+        }, 3000);
+
+    </script>
+
+</body>
+
+</html>
