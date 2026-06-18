@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-
     <title>Ejemplo de encapsulamiento</title>
-
 </head>
-
 <body>
-
     <button onclick="ejecutar();">Ejecutar</button>
 
     <script>
-
         class Automovil {
 
             // Atributos privados
@@ -25,86 +17,49 @@
             constructor(nombre) {
                 this.#nombre = nombre;
                 this.#velocidad = 0;
-
-
             }
-
             acelerar(cantidad) {
-
                 this.#velocidad += cantidad;
-
                 if (this.#velocidad > 250) {
-
                     this.#velocidad = 250;
-
                 }
-
             }
-
             frenar(cantidad) {
-
                 this.#velocidad -= cantidad;
-
                 if (this.#velocidad < 0) {
-
                     this.#velocidad = 0;
-
                 }
-
             }
-
             mostrarVelocidad() {
-
-                console.log(`El vehiculo ${this.#nombre} tiene una vida actual de: ${this.#velocidad}km/h`);
-
+                console.log(`El vehiculo ${this.#nombre} tiene una velocidad actual de: ${this.#velocidad}km/h`);
             }
-
             getNombre() {
-
                 return this.#nombre;
-
             }
-
             getVelocidad() {
-
                 return this.#velocidad;
-
             }
-
         }
-
-
-
         function ejecutar() {
-
             let auto1 = new Automovil('Bugatti Veyron');
-
             let auto2 = new Automovil('Fiat 147');
+
+            Math
 
             auto1.acelerar(350);
             auto1.frenar(10);
-
             auto1.mostrarVelocidad();
 
             auto2.acelerar(150);
             auto2.frenar(100);
-
             auto2.mostrarVelocidad();
-
 
             //console.log(`Modelo del vehiculo: ${auto1.getNombre()}`);
             //console.log(`Tiene una velocidad de ${auto1.getVelocidad()} km/h`);
 
             //console.log(`Modelo del vehiculo: ${auto2.getNombre()}`);
             //console.log(`Tiene una velocidad de ${auto2.getVelocidad()} km/h`);
-
-
         }
-
-
-
     </script>
-
 </body>
-
 </html>

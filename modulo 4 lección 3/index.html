@@ -15,7 +15,7 @@
             this.#nombre = nombre;
             this.#edad = edad;
         }
-
+        //Metodo privado, solo puede ser vista por la clase.
         #esMayordeEdad(){
             return this.#edad > 18;
         }
@@ -28,6 +28,9 @@
         }
     }
         function ejecutar () {
+
+            // se generan los objetos persona1 y persona2 al ser privado el metodo el objeto no lo puede leer, solo la clase.
+
             let persona1 = new Persona ('Javier', 30);
             let persona2 = new Persona ('Elena', 17);
 
@@ -35,7 +38,7 @@
             alert (persona2.obtenerInformacion());
 
             //Intenta acceder a un método privado: ¡Error!, no aparecerá la alerta
-            alert(persona1.#esMayordeEdad());
+            alert(persona1.esMayordeEdad());
 
         }
 
